@@ -1,0 +1,36 @@
+{
+	"name": "material-snake",
+	"version": "1.0.0",
+	"description": "A TypeScript implementation of the popular game.",
+	"keywords": [
+		"Snake",
+		"HTML5 Game",
+		"Game",
+		"TypeScript Game"
+	],
+	"scripts": {
+		"build": "tsc --build tsconfig.json",
+		"start": "tsc -w",
+		"lint": "tslint -p tsconfig.json -c tslint.json src/*",
+		"pwa": "create-pwa --icon=\"./assets/icon.png\""
+	},
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"repository": "https://github.com/scriptex/material-snake",
+	"bugs": {
+		"url": "https://github.com/scriptex/material-snake/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"main": "dist/index.js",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"create-pwa": "1.0.0",
+		"stylelint": "9.10.1",
+		"stylelint-config-recommended": "2.2.0",
+		"tslint": "5.17.0",
+		"tslint-config-prettier": "1.18.0",
+		"typescript": "3.5.1"
+	},
+	"typings": "dist/*.d.ts",
+	"private": true
+}
