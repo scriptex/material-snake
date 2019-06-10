@@ -1,9 +1,17 @@
-interface Point {
+import { TouchSweep } from './touchswipe.js';
+
+export interface Point {
 	x: number;
 	y: number;
 }
 
-class Snake {
+export interface IndexedList<T> {
+	[key: string]: T;
+}
+
+export class Snake {
+	public touchSwipeInstance: TouchSweep;
+
 	private width: number;
 	private height: number;
 
@@ -75,7 +83,7 @@ class Snake {
 	}
 
 	private init = (): void => {
-		this.bind();
+		this.bindEvents();
 		this.start();
 	};
 
@@ -168,12 +176,41 @@ class Snake {
 		this.bestScore.innerHTML = localStorage.getItem(this.storageKey);
 	};
 
-	private bind = (): void => {
-		document.addEventListener('keydown', this.changeDirection);
+	private bindEvents = (): void => {
+		document.addEventListener('keydown', this.bindKeyboardEvents);
+
+		this.bindTouchEvents();
 	};
 
-	private changeDirection = (event: KeyboardEvent): void => {
-		switch (event.keyCode) {
+	private bindKeyboardEvents = (event: KeyboardEvent): void => {
+		this.respondToGesture(event.keyCode);
+	};
+
+	private bindTouchEvents = (): void => {
+		const board: HTMLCanvasElement = this.canvas;
+		const touchEvents: IndexedList<number> = {
+			swipeleft: 37,
+			swipeup: 38,
+			swiperight: 39,
+			swipedown: 40
+		};
+
+		this.touchSwipeInstance = new TouchSweep(board);
+
+		Object.keys(touchEvents).forEach(
+			(name: string): void => {
+				board.addEventListener(
+					name,
+					(event: CustomEvent): void => {
+						this.respondToGesture(touchEvents[event.detail.eventName]);
+					}
+				);
+			}
+		);
+	};
+
+	private respondToGesture = (keyCode: number): void => {
+		switch (keyCode) {
 			case 37:
 				this.velocityX = -1;
 				this.velocityY = 0;
@@ -194,4 +231,4 @@ class Snake {
 	};
 }
 
-const instance = new Snake();
+export const instance: Snake = new Snake();

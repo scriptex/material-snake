@@ -1,7 +1,8 @@
-class Snake {
+import { TouchSweep } from './touchswipe.js';
+export class Snake {
     constructor() {
         this.init = () => {
-            this.bind();
+            this.bindEvents();
             this.start();
         };
         this.start = () => {
@@ -68,11 +69,30 @@ class Snake {
             }
             this.bestScore.innerHTML = localStorage.getItem(this.storageKey);
         };
-        this.bind = () => {
-            document.addEventListener('keydown', this.changeDirection);
+        this.bindEvents = () => {
+            document.addEventListener('keydown', this.bindKeyboardEvents);
+            this.bindTouchEvents();
         };
-        this.changeDirection = (event) => {
-            switch (event.keyCode) {
+        this.bindKeyboardEvents = (event) => {
+            this.respondToGesture(event.keyCode);
+        };
+        this.bindTouchEvents = () => {
+            const board = this.canvas;
+            const touchEvents = {
+                swipeleft: 37,
+                swipeup: 38,
+                swiperight: 39,
+                swipedown: 40
+            };
+            this.touchSwipeInstance = new TouchSweep(board);
+            Object.keys(touchEvents).forEach((name) => {
+                board.addEventListener(name, (event) => {
+                    this.respondToGesture(touchEvents[event.detail.eventName]);
+                });
+            });
+        };
+        this.respondToGesture = (keyCode) => {
+            switch (keyCode) {
                 case 37:
                     this.velocityX = -1;
                     this.velocityY = 0;
@@ -117,4 +137,4 @@ class Snake {
         this.init();
     }
 }
-const instance = new Snake();
+export const instance = new Snake();

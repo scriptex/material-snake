@@ -27,7 +27,8 @@ const urlsToCache = [
 	'/assets/mstile-150x150.png',
 	'/assets/mstile-310x150.png',
 	'/assets/mstile-310x310.png',
-	'/dist/index.js'
+	'/dist/index.js',
+	'/dist/touchswipe.js'
 ];
 
 self.addEventListener('install', event => {

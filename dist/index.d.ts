@@ -1,8 +1,13 @@
-interface Point {
+import { TouchSweep } from './touchswipe.js';
+export interface Point {
     x: number;
     y: number;
 }
-declare class Snake {
+export interface IndexedList<T> {
+    [key: string]: T;
+}
+export declare class Snake {
+    touchSwipeInstance: TouchSweep;
     private width;
     private height;
     private storageKey;
@@ -32,7 +37,9 @@ declare class Snake {
     private drawSnake;
     private drawFood;
     private setScore;
-    private bind;
-    private changeDirection;
+    private bindEvents;
+    private bindKeyboardEvents;
+    private bindTouchEvents;
+    private respondToGesture;
 }
-declare const instance: Snake;
+export declare const instance: Snake;

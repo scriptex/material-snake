@@ -36,3 +36,5 @@ assets/mstile-310x150.png
 assets/mstile-310x310.png
 
 # scripts
+dist/index.js
+dist.touchswipe.js
