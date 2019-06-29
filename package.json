@@ -24,7 +24,7 @@
 	"license": "MIT",
 	"dependencies": {},
 	"devDependencies": {
-		"create-pwa": "1.0.0",
+		"create-pwa": "2.0.1",
 		"stylelint": "10.1.0",
 		"stylelint-config-recommended": "2.2.0",
 		"tslint": "5.18.0",
