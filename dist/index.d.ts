@@ -43,3 +43,4 @@ export declare class Snake {
     private respondToGesture;
 }
 export declare const instance: Snake;
+export declare const isLocalhost: boolean;

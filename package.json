@@ -12,7 +12,7 @@
 		"build": "tsc --build tsconfig.json",
 		"start": "tsc -w",
 		"lint": "tslint -p tsconfig.json -c tslint.json src/*",
-		"pwa": "create-pwa --icon=\"./assets/icon.png\""
+		"pwa": "create-pwa --icon=\"./assets/icon.png\" --launch=\"./assets/launch.png\""
 	},
 	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
 	"repository": "https://github.com/scriptex/material-snake",
@@ -24,7 +24,7 @@
 	"license": "MIT",
 	"dependencies": {},
 	"devDependencies": {
-		"create-pwa": "1.0.0",
+		"create-pwa": "2.0.1",
 		"stylelint": "10.1.0",
 		"stylelint-config-recommended": "2.2.0",
 		"tslint": "5.18.0",
