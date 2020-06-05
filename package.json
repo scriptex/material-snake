@@ -26,7 +26,7 @@
 	"devDependencies": {
 		"@types/vfile": "4.0.0",
 		"create-pwa": "2.3.0",
-		"stylelint": "13.5.0",
+		"stylelint": "13.6.0",
 		"stylelint-config-recommended": "3.0.0",
 		"tslint": "6.1.2",
 		"tslint-config-prettier": "1.18.0",
