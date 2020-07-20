@@ -44,26 +44,18 @@ export class Snake {
 
 	constructor() {
 		const doc: HTMLDocument = document;
-		const { innerWidth, innerHeight } = window;
 
 		this.score = doc.querySelector('#score');
 		this.footer = doc.querySelector('footer');
 		this.bestScore = doc.querySelector('#best');
 		this.currentScore = doc.querySelector('#current');
 
-		this.width = innerWidth;
-		this.height = innerHeight - this.score.offsetHeight - this.footer.offsetHeight;
-
 		this.storageKey = 'material-snake-best-score';
 
 		this.canvas = document.querySelector('canvas');
 		this.context = this.canvas.getContext('2d');
 
-		this.canvas.setAttribute('width', this.width.toString());
-		this.canvas.setAttribute('height', this.height.toString());
-
-		this.canvas.width = this.width;
-		this.canvas.height = this.height;
+		this.resize();
 
 		this.snakePositionX = this.snakePositionY = 10;
 
@@ -81,6 +73,19 @@ export class Snake {
 
 		this.init();
 	}
+
+	private resize = (): void => {
+		const { innerWidth, innerHeight } = window;
+
+		this.width = innerWidth;
+		this.height = innerHeight - this.score.offsetHeight - this.footer.offsetHeight;
+
+		this.canvas.setAttribute('width', this.width.toString());
+		this.canvas.setAttribute('height', this.height.toString());
+
+		this.canvas.width = this.width;
+		this.canvas.height = this.height;
+	};
 
 	private init = (): void => {
 		this.bindEvents();
@@ -180,6 +185,11 @@ export class Snake {
 		document.addEventListener('keydown', this.bindKeyboardEvents);
 
 		this.bindTouchEvents();
+
+		window.addEventListener('resize', () => {
+			this.resize();
+			this.drawBoard();
+		});
 	};
 
 	private bindKeyboardEvents = (event: KeyboardEvent): void => {
@@ -197,16 +207,11 @@ export class Snake {
 
 		this.touchSwipeInstance = new TouchSweep(board);
 
-		Object.keys(touchEvents).forEach(
-			(name: string): void => {
-				board.addEventListener(
-					name,
-					(event: CustomEvent): void => {
-						this.respondToGesture(touchEvents[event.detail.eventName]);
-					}
-				);
-			}
-		);
+		Object.keys(touchEvents).forEach((name: string): void => {
+			board.addEventListener(name, (event: CustomEvent): void => {
+				this.respondToGesture(touchEvents[event.detail.eventName]);
+			});
+		});
 	};
 
 	private respondToGesture = (keyCode: number): void => {
@@ -233,12 +238,12 @@ export class Snake {
 
 export const instance: Snake = new Snake();
 
-export const isLocalhost: boolean = Boolean(
+export const isLocalhost = Boolean(
 	window.location.hostname === 'localhost' ||
 		window.location.hostname === '[::1]' ||
 		window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
 );
 
 if (!isLocalhost) {
-	navigator.serviceWorker.register('./service-worker.js');
+	void navigator.serviceWorker.register('./service-worker.js');
 }

@@ -56,37 +56,71 @@ nav svg {
 	display: block;
 }
 
-nav svg {
-	fill: #fff;
+nav a {
+	color: #fff;
 }
 
-.svg-email {
+.c-svg-email {
+	width: 1.5rem;
 	height: 1.69rem;
-	width: 1.5rem;
+	fill: currentColor;
 }
 
-.svg-github,
-.svg-gitlab {
+.c-svg-github,
+.c-svg-gitlab {
+	width: 1.5rem;
 	height: 1.63rem;
-	width: 1.5rem;
+	fill: currentColor;
 }
 
-.svg-twitter {
+.c-svg-twitter {
+	width: 1.5rem;
 	height: 1.38rem;
+	fill: currentColor;
+}
+
+.c-svg-npm {
 	width: 1.5rem;
+	height: 1.5rem;
+	fill: #546e7a;
+	background-color: currentColor;
+	border-radius: 0.25rem;
 }
 
-.svg-npm {
-	height: 1.5rem;
-	width: 4rem;
-}
-
-.svg-codepen {
-	height: 1.5rem;
+.c-svg-stackoverflow {
 	width: 1.5rem;
+	height: 1.5rem;
+	fill: currentColor;
 }
 
-.svg-linkedin {
+.c-svg-youtube {
+	width: 3rem;
+	height: 1.5rem;
+	fill: currentColor;
+}
+
+.c-svg-linkedin {
+	width: 1.5rem;
 	height: 1.63rem;
+	fill: currentColor;
+}
+
+.c-svg-logo {
+	width: 1.75rem;
+	height: 1.75rem;
+	fill: currentColor;
+	stroke: currentColor;
+	stroke-width: 0.325rem;
+}
+
+.c-svg-codepen,
+.c-svg-google-plus {
 	width: 1.5rem;
+	height: 1.5rem;
+	fill: currentColor;
+}
+
+.c-svg-codersrank {
+	width: 2.5rem;
+	height: 1.5rem;
 }

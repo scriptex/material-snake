@@ -1,6 +1,15 @@
 import { TouchSweep } from './touchswipe.js';
 export class Snake {
     constructor() {
+        this.resize = () => {
+            const { innerWidth, innerHeight } = window;
+            this.width = innerWidth;
+            this.height = innerHeight - this.score.offsetHeight - this.footer.offsetHeight;
+            this.canvas.setAttribute('width', this.width.toString());
+            this.canvas.setAttribute('height', this.height.toString());
+            this.canvas.width = this.width;
+            this.canvas.height = this.height;
+        };
         this.init = () => {
             this.bindEvents();
             this.start();
@@ -72,6 +81,10 @@ export class Snake {
         this.bindEvents = () => {
             document.addEventListener('keydown', this.bindKeyboardEvents);
             this.bindTouchEvents();
+            window.addEventListener('resize', () => {
+                this.resize();
+                this.drawBoard();
+            });
         };
         this.bindKeyboardEvents = (event) => {
             this.respondToGesture(event.keyCode);
@@ -112,20 +125,14 @@ export class Snake {
             }
         };
         const doc = document;
-        const { innerWidth, innerHeight } = window;
         this.score = doc.querySelector('#score');
         this.footer = doc.querySelector('footer');
         this.bestScore = doc.querySelector('#best');
         this.currentScore = doc.querySelector('#current');
-        this.width = innerWidth;
-        this.height = innerHeight - this.score.offsetHeight - this.footer.offsetHeight;
         this.storageKey = 'material-snake-best-score';
         this.canvas = document.querySelector('canvas');
         this.context = this.canvas.getContext('2d');
-        this.canvas.setAttribute('width', this.width.toString());
-        this.canvas.setAttribute('height', this.height.toString());
-        this.canvas.width = this.width;
-        this.canvas.height = this.height;
+        this.resize();
         this.snakePositionX = this.snakePositionY = 10;
         this.velocityX = this.velocityY = 0;
         this.gridSize = 20;
@@ -142,5 +149,5 @@ export const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
     window.location.hostname === '[::1]' ||
     window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
 if (!isLocalhost) {
-    navigator.serviceWorker.register('./service-worker.js');
+    void navigator.serviceWorker.register('./service-worker.js');
 }

@@ -29,6 +29,7 @@ export declare class Snake {
     private trail;
     private tail;
     constructor();
+    private resize;
     private init;
     private start;
     private play;
