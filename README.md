@@ -6,7 +6,7 @@ A TypeScript implementation of the popular game.
 
 ## Play
 
-[HERE](https://material-snake.atanas.info)
+[HERE](https://snake.atanas.info)
 
 ## License
 
