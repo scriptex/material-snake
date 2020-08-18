@@ -23,7 +23,7 @@
 	"main": "dist/index.js",
 	"license": "MIT",
 	"dependencies": {
-		"html-head-component": "1.0.0"
+		"html-head-component": "1.1.0"
 	},
 	"devDependencies": {
 		"@types/vfile": "4.0.0",
