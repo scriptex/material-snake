@@ -1,10 +1,13 @@
+// @ts-ignore
+import('https://unpkg.com/html-head-component');
 import { TouchSweep } from './touchswipe.js';
 export class Snake {
     constructor() {
+        this.footerHeight = 77;
         this.resize = () => {
             const { innerWidth, innerHeight } = window;
             this.width = innerWidth;
-            this.height = innerHeight - this.score.offsetHeight - this.footer.offsetHeight;
+            this.height = innerHeight - this.score.offsetHeight - this.footerHeight;
             this.canvas.setAttribute('width', this.width.toString());
             this.canvas.setAttribute('height', this.height.toString());
             this.canvas.width = this.width;
@@ -13,6 +16,7 @@ export class Snake {
         this.init = () => {
             this.bindEvents();
             this.start();
+            this.resize();
         };
         this.start = () => {
             setInterval(this.play, 1000 / 12);
@@ -126,7 +130,6 @@ export class Snake {
         };
         const doc = document;
         this.score = doc.querySelector('#score');
-        this.footer = doc.querySelector('footer');
         this.bestScore = doc.querySelector('#best');
         this.currentScore = doc.querySelector('#current');
         this.storageKey = 'material-snake-best-score';

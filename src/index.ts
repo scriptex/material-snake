@@ -1,3 +1,6 @@
+// @ts-ignore
+import('https://unpkg.com/html-head-component');
+
 import { TouchSweep } from './touchswipe.js';
 
 export interface Point {
@@ -18,9 +21,9 @@ export class Snake {
 	private storageKey: string;
 
 	private score: HTMLElement;
-	private footer: HTMLElement;
 	private bestScore: HTMLElement;
 	private currentScore: HTMLElement;
+	private footerHeight: number = 77;
 
 	private canvas: HTMLCanvasElement;
 	private context: CanvasRenderingContext2D;
@@ -46,7 +49,6 @@ export class Snake {
 		const doc: HTMLDocument = document;
 
 		this.score = doc.querySelector('#score');
-		this.footer = doc.querySelector('footer');
 		this.bestScore = doc.querySelector('#best');
 		this.currentScore = doc.querySelector('#current');
 
@@ -78,7 +80,7 @@ export class Snake {
 		const { innerWidth, innerHeight } = window;
 
 		this.width = innerWidth;
-		this.height = innerHeight - this.score.offsetHeight - this.footer.offsetHeight;
+		this.height = innerHeight - this.score.offsetHeight - this.footerHeight;
 
 		this.canvas.setAttribute('width', this.width.toString());
 		this.canvas.setAttribute('height', this.height.toString());
@@ -90,6 +92,7 @@ export class Snake {
 	private init = (): void => {
 		this.bindEvents();
 		this.start();
+		this.resize();
 	};
 
 	private start = (): void => {

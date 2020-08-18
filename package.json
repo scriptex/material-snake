@@ -22,7 +22,9 @@
 	},
 	"main": "dist/index.js",
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"html-head-component": "1.0.0"
+	},
 	"devDependencies": {
 		"@types/vfile": "4.0.0",
 		"create-pwa": "2.3.0",

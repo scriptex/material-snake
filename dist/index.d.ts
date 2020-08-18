@@ -12,9 +12,9 @@ export declare class Snake {
     private height;
     private storageKey;
     private score;
-    private footer;
     private bestScore;
     private currentScore;
+    private footerHeight;
     private canvas;
     private context;
     private snakePositionX;

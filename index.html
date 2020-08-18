@@ -2,38 +2,17 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=480, initial-scale=1" />
 
-		<title>Material Snake</title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/apple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/apple-touch-icon-60x60.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/apple-touch-icon-152x152.png" />
-		<link rel="icon" type="image/png" href="assets/favicon-196x196.png" sizes="196x196" />
-		<link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
-		<link rel="icon" type="image/png" href="assets/favicon-128.png" sizes="128x128" />
-		<meta name="application-name" content="Material Snake" />
-		<meta name="msapplication-TileColor" content="#546e7a" />
-		<meta name="msapplication-TileImage" content="assets/mstile-144x144.png" />
-		<meta name="msapplication-square70x70logo" content="assets/mstile-70x70.png" />
-		<meta name="msapplication-square150x150logo" content="assets/mstile-150x150.png" />
-		<meta name="msapplication-wide310x150logo" content="assets/mstile-310x150.png" />
-		<meta name="msapplication-square310x310logo" content="assets/mstile-310x310.png" />
-		<meta name="theme-color" content="#546e7a" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
 
 		<link rel="manifest" href="manifest.json" />
-
-		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<html-head-component src="./meta.json" hidden></html-head-component>
 		<div id="score">
 			<div>Score: <span id="current">0</span></div>
 			<div>Best: <span id="best">0</span></div>
@@ -45,5 +24,5 @@
 	</body>
 
 	<script type="module" src="dist/index.js"></script>
-	<script src="https://unpkg.com/scriptex-socials"></script>
+	<script async src="https://unpkg.com/scriptex-socials"></script>
 </html>
