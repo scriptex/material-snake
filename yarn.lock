@@ -1335,10 +1335,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
   integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
 
-html-head-component@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/html-head-component/-/html-head-component-1.0.0.tgz#b7ba0429b59fdf5a4e790c6461e4a2434a5775a7"
-  integrity sha512-Je8EbFaK5CdIN0xuu5bN5Bw+uSW+FMQCUeF0MIW6m9DppKkp5X2m8NSaaGyp39cFS+3o1g0QLvfDgqd31PcBtA==
+html-head-component@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/html-head-component/-/html-head-component-1.1.0.tgz#1d96176e33b09d99def1b377cb94a1f060c61d9b"
+  integrity sha512-Mi8L2Tt/6kq5S147qjFZGebZUU7dmjx3aX0yK79sc9CSgtVHVFQedQ6bHuyHEaVCD3Xvvx/3G65DSck4h1VvTw==
 
 html-tags@^3.1.0:
   version "3.1.0"
