@@ -125,10 +125,5 @@
 		"tag": "meta",
 		"name": "theme-color",
 		"content": "#546e7a"
-	},
-	{
-		"tag": "link",
-		"rel": "stylesheet",
-		"href": "style.css"
 	}
 ]
