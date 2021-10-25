@@ -26,10 +26,7 @@
 		"html-head-component": "1.1.0"
 	},
 	"devDependencies": {
-		"@types/vfile": "4.0.0",
 		"create-pwa": "2.3.1",
-		"stylelint": "13.13.1",
-		"stylelint-config-recommended": "5.0.0",
 		"tslint": "6.1.3",
 		"tslint-config-prettier": "1.18.0",
 		"typescript": "4.4.4"
