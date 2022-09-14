@@ -16,3 +16,7 @@ node_modules/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Project specific
+.parcel-cache
+dist

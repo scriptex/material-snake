@@ -7,24 +7,27 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 		<meta name="mobile-web-app-capable" content="yes" />
+
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 
-		<link rel="manifest" href="manifest.json" />
+		<link rel="manifest" href="manifest.webmanifest" />
 
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<html-head-component src="./meta.json" hidden></html-head-component>
+		<html-head-component src="meta.json" hidden></html-head-component>
+
 		<div id="score">
 			<div>Score: <span id="current">0</span></div>
 			<div>Best: <span id="best">0</span></div>
 		</div>
+
 		<canvas></canvas>
+
 		<footer>
 			<social-links></social-links>
 		</footer>
 	</body>
 
-	<script type="module" src="dist/index.js"></script>
-	<script async src="https://unpkg.com/scriptex-socials"></script>
+	<script type="module" src="index.ts"></script>
 </html>
