@@ -1,9 +1,5 @@
 [
 	{
-		"tag": "title",
-		"content": "Material Snake"
-	},
-	{
 		"tag": "link",
 		"rel": "apple-touch-icon-precomposed",
 		"sizes": "57x57",

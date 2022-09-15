@@ -1,22 +1,13 @@
-// @ts-ignore
-import('https://unpkg.com/html-head-component');
+import TouchSweep from 'touchsweep';
 
-import { TouchSweep } from './touchswipe.js';
-
-export interface Point {
-	x: number;
-	y: number;
-}
-
-export interface IndexedList<T> {
-	[key: string]: T;
-}
+type Point = Record<'x' | 'y', number>;
+type IndexedList<T> = Record<string, T>;
 
 export class Snake {
-	public touchSwipeInstance: TouchSweep;
+	public touchSwipeInstance: TouchSweep | void = undefined;
 
-	private width: number;
-	private height: number;
+	private width: number = 0;
+	private height: number = 0;
 
 	private storageKey: string;
 
@@ -46,16 +37,16 @@ export class Snake {
 	private tail: number;
 
 	constructor() {
-		const doc: HTMLDocument = document;
+		const doc: Document = document;
 
-		this.score = doc.querySelector('#score');
-		this.bestScore = doc.querySelector('#best');
-		this.currentScore = doc.querySelector('#current');
+		this.score = doc.querySelector('#score') as HTMLElement;
+		this.bestScore = doc.querySelector('#best') as HTMLElement;
+		this.currentScore = doc.querySelector('#current') as HTMLElement;
 
 		this.storageKey = 'material-snake-best-score';
 
-		this.canvas = document.querySelector('canvas');
-		this.context = this.canvas.getContext('2d');
+		this.canvas = document.querySelector('canvas') as HTMLCanvasElement;
+		this.context = this.canvas.getContext('2d') as CanvasRenderingContext2D;
 
 		this.resize();
 
@@ -168,7 +159,7 @@ export class Snake {
 	};
 
 	private setScore = (): void => {
-		const bestScore: string = localStorage.getItem(this.storageKey);
+		const bestScore: string = localStorage.getItem(this.storageKey) || '';
 		const currentScore: number = this.tail - 5;
 
 		this.currentScore.innerHTML = currentScore.toString();
@@ -181,7 +172,7 @@ export class Snake {
 			localStorage.setItem(this.storageKey, currentScore.toString());
 		}
 
-		this.bestScore.innerHTML = localStorage.getItem(this.storageKey);
+		this.bestScore.innerHTML = localStorage.getItem(this.storageKey) || '';
 	};
 
 	private bindEvents = (): void => {
@@ -211,7 +202,7 @@ export class Snake {
 		this.touchSwipeInstance = new TouchSweep(board);
 
 		Object.keys(touchEvents).forEach((name: string): void => {
-			board.addEventListener(name, (event: CustomEvent): void => {
+			board.addEventListener(name, (event: any): void => {
 				this.respondToGesture(touchEvents[event.detail.eventName]);
 			});
 		});
@@ -237,16 +228,4 @@ export class Snake {
 				break;
 		}
 	};
-}
-
-export const instance: Snake = new Snake();
-
-export const isLocalhost = Boolean(
-	window.location.hostname === 'localhost' ||
-		window.location.hostname === '[::1]' ||
-		window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-);
-
-if (!isLocalhost) {
-	void navigator.serviceWorker.register('./service-worker.js');
 }
