@@ -1,11 +1,9 @@
-import 'scriptex-socials';
-import 'html-head-component';
 import TouchSweep from 'touchsweep';
 
 type Point = Record<'x' | 'y', number>;
 type IndexedList<T> = Record<string, T>;
 
-class Snake {
+export class Snake {
 	public touchSwipeInstance: TouchSweep | void = undefined;
 
 	private width: number = 0;
@@ -230,16 +228,4 @@ class Snake {
 				break;
 		}
 	};
-}
-
-new Snake();
-
-const isLocalhost = Boolean(
-	window.location.hostname === 'localhost' ||
-		window.location.hostname === '[::1]' ||
-		window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-);
-
-if (!isLocalhost) {
-	void navigator.serviceWorker.register(`./service-worker.js`);
 }

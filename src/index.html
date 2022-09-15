@@ -3,16 +3,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=480, initial-scale=1" />
-
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 
 		<meta name="mobile-web-app-capable" content="yes" />
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 
-		<link rel="manifest" href="manifest.webmanifest" />
+		<title>Material Snake | by Atanas Atanasov</title>
 
-		<link rel="stylesheet" href="style.css" />
+		<link rel="manifest" href="../static//manifest.webmanifest" />
+		<link rel="stylesheet" href="./styles/style.css" />
 	</head>
 	<body>
 		<html-head-component src="meta.json" hidden></html-head-component>
@@ -29,5 +28,9 @@
 		</footer>
 	</body>
 
-	<script type="module" src="index.ts"></script>
+	<script type="module" src="./scripts/index.ts"></script>
+
+	<script type="module">
+		navigator.serviceWorker.register(`./service-worker.js`);
+	</script>
 </html>

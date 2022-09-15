@@ -10,9 +10,9 @@
     "@babel/highlight" "^7.18.6"
 
 "@babel/helper-validator-identifier@^7.18.6":
-  version "7.18.6"
-  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.18.6.tgz#9c97e30d31b2b8c72a1d08984f2ca9b574d7a076"
-  integrity sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==
+  version "7.19.1"
+  resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.19.1.tgz#7eea834cf32901ffdc1a7ee555e2f9c27e249ca2"
+  integrity sha512-awrNfaMtnHUr653GgGEs++LlAvW6w+DcPrOliSMXWCKo597CwL5Acf/wWdNkf/tfEQE3mjkeD1YOVZOUV/od1w==
 
 "@babel/highlight@^7.18.6":
   version "7.18.6"
@@ -462,7 +462,7 @@
     "@parcel/utils" "2.7.0"
     posthtml "^0.16.4"
 
-"@parcel/plugin@2.7.0":
+"@parcel/plugin@2.7.0", "@parcel/plugin@^2.0.0-beta.1":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@parcel/plugin/-/plugin-2.7.0.tgz#0211281025d02afbc5a23fba237b7aae02e34e51"
   integrity sha512-qqgx+nnMn6/0lRc4lKbLGmhNtBiT93S2gFNB4Eb4Pfz/SxVYoW+fmml+KdfOSiZffWOAH5L6NwhyD7N8aSikzw==
@@ -672,6 +672,15 @@
     posthtml-render "^3.0.0"
     semver "^5.7.1"
 
+"@parcel/transformer-typescript-tsc@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-typescript-tsc/-/transformer-typescript-tsc-2.7.0.tgz#fe8068da65ae77c0e38c0018d9c0f38f05a81e5c"
+  integrity sha512-s7poL/TQk+/zg09GKgxp7uErzzgJe+afuzgngqlOjsP0nXUAthQvtU+RwozOKSCNBh0/RwyD5gokp0SCQtIX+A==
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/source-map" "^2.0.0"
+    "@parcel/ts-utils" "2.7.0"
+
 "@parcel/transformer-webmanifest@2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@parcel/transformer-webmanifest/-/transformer-webmanifest-2.7.0.tgz#276cc26ea8078b118d68df6d4ac109e8e19f5806"
@@ -681,6 +690,13 @@
     "@parcel/diagnostic" "2.7.0"
     "@parcel/plugin" "2.7.0"
     "@parcel/utils" "2.7.0"
+
+"@parcel/ts-utils@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/ts-utils/-/ts-utils-2.7.0.tgz#b5abe7eb5f977c238e11178bbf9a481481d60d1e"
+  integrity sha512-hxgWu9p9+zo9OvllYy12DRrAEyAGGLQysI6PyNvYvsZSmb7sQg9YQ7spD1QmWIQUC1H6BkyzQsowpK0hvPK1xg==
+  dependencies:
+    nullthrows "^1.1.1"
 
 "@parcel/types@2.7.0":
   version "2.7.0"
@@ -802,9 +818,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001370:
-  version "1.0.30001399"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001399.tgz#1bf994ca375d7f33f8d01ce03b7d5139e8587873"
-  integrity sha512-4vQ90tMKS+FkvuVWS5/QY1+d805ODxZiKFzsU8o/RsVJz49ZSRR8EjykLJbqhzdPgadbX6wB538wOzle3JniRA==
+  version "1.0.30001400"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001400.tgz#3038bee70d8b875604cd8833cb0e5e254ee0281a"
+  integrity sha512-Mv659Hn65Z4LgZdJ7ge5JTVbE3rqbJaaXgW5LEI9/tOaXclfIZ8DW7D7FCWWWmWiiPS7AC48S8kf3DApSxQdgA==
 
 chalk@^2.0.0:
   version "2.4.2"
@@ -955,9 +971,9 @@ dotenv@^7.0.0:
   integrity sha512-M3NhsLbV1i6HuGzBUH8vXrtxOk+tWmzWKDMbAVSUp3Zsjm7ywFeuwrUXhmhQyRK1q5B5GGy7hcXPbj3bnfZg2g==
 
 electron-to-chromium@^1.4.202:
-  version "1.4.249"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.249.tgz#49c34336c742ee65453dbddf4c84355e59b96e2c"
-  integrity sha512-GMCxR3p2HQvIw47A599crTKYZprqihoBL4lDSAUmr7IYekXFK5t/WgEBrGJDCa2HWIZFQEkGuMqPCi05ceYqPQ==
+  version "1.4.251"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.251.tgz#8b62448f3c591f0d32488df09454dda72dec96d5"
+  integrity sha512-k4o4cFrWPv4SoJGGAydd07GmlRVzmeDIJ6MaEChTUjk4Dmomn189tCicSzil2oyvbPoGgg2suwPDNWq4gWRhoQ==
 
 entities@^2.0.0:
   version "2.2.0"
@@ -1065,61 +1081,61 @@ json5@^2.2.0, json5@^2.2.1:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.1.tgz#655d50ed1e6f95ad1a3caababd2b0efda10b395c"
   integrity sha512-1hqLFMSrGHRHxav9q9gNjJ5EXznIxGVO09xQRrwplcS8qs28pZ8s8hupZAmqDwZUmVZ2Qb2jnyPOWcDH8m8dlA==
 
-lightningcss-darwin-arm64@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.14.0.tgz#a10bd749b375c2749d1dd6bacd5c075bb10a4939"
-  integrity sha512-AFt8Qs9Qjbg5AlB/3cYljanVEeyJI4C9bPqO8hI7bNa2HdDIINI4NgfGpri8BNwA3zcAlFPH38caIqcG3LWC+g==
+lightningcss-darwin-arm64@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-darwin-arm64/-/lightningcss-darwin-arm64-1.15.0.tgz#c4fad19f33d96545e92e98f4a664d36edf52f03c"
+  integrity sha512-5MZH4uOq/CgcFJ+8LrhTyAu1gwqEONC+kWg8z/0Lr+VeWl/hTBdPs9f0DMw4EHZVCtAajaicgV7pnwUoDBcn0A==
 
-lightningcss-darwin-x64@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.14.0.tgz#2d4796ab81790bcce8266fb3a84f85e7c414b510"
-  integrity sha512-xF9YSNxHiAOyYp5/Ogo4K+SybcQExWUi+vkIGnpO6zQsQda7KFgJt2aA3AwaEj9ouf2yUHHKcsk2TiixlZTtTg==
+lightningcss-darwin-x64@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-darwin-x64/-/lightningcss-darwin-x64-1.15.0.tgz#509cb0189b7db4d7ea4c3fb710ba79192c17fc9b"
+  integrity sha512-mWYc0xwBL+PDw6AZsgp8ScwyYgh89rgO7JAcbhxAUbFKSGPV6ymseXJVwYEecRbdtmfKxZrL1S1fE+609mRQWA==
 
-lightningcss-linux-arm-gnueabihf@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.14.0.tgz#82ab47c611342adcb617e28fb9599486aa5ee913"
-  integrity sha512-8cH/qwZnoU3zIruVNWGLBDVm6f1w/ZC3eMDkFOTEF4FaW3jCpxEg/BH5r04lNUM/SO6Zu2C+vgJaEKdUm58dQg==
+lightningcss-linux-arm-gnueabihf@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm-gnueabihf/-/lightningcss-linux-arm-gnueabihf-1.15.0.tgz#f916ba49bf9feb47d522cee8fa3c9026436fa7a6"
+  integrity sha512-mK/cI5FNgc1FIgeqpEVpnxXW83DAKewmGrlhvtQfwNEAnOIumltltr0MMjjTURF0usPhZaiGJk/r50xVDrU4FQ==
 
-lightningcss-linux-arm64-gnu@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.14.0.tgz#c9778570ffacc70c0b7f08910dbceb3ca80a477a"
-  integrity sha512-88NmNwTRa10MRDJa2DghZuGZq8rvFeZIm0G4k/oA2P5XaJJw7f6IhDEjCtBoruYOZhulBkEq2xQY+q0AWYMFcw==
+lightningcss-linux-arm64-gnu@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-gnu/-/lightningcss-linux-arm64-gnu-1.15.0.tgz#49919ba643e896a4a9acdc29dfd9efe3f54fe6c9"
+  integrity sha512-cVpXV5UUsl82uFFp5NUxXtu7eTAkxA1XIK6JLN4CbJKdIVinympA9/yWDzWmGs4Nu39im3clWD0n+1jwE0b4lQ==
 
-lightningcss-linux-arm64-musl@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.14.0.tgz#9d5fbbdddffbf1583462644a3e4934d38702e472"
-  integrity sha512-8FSXmV7yPqk+1vErgdEO6OvDXDT/MkJMF+jSaUuL5wEvCC5yiJsaktNEJvn5EHsFbODi9DNvUt71sjeFCJma1w==
+lightningcss-linux-arm64-musl@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-arm64-musl/-/lightningcss-linux-arm64-musl-1.15.0.tgz#6628d7cb156e1efd5c8232b383f7d16704f92bd1"
+  integrity sha512-xbSvBeoacWXL8l3CzGWSEfQ6ro3L7xwkQobtYOJi5Whlw1F5pLm3pTmxDcRlEClY3Vf6kVQmP0LCoNyfWtmfWQ==
 
-lightningcss-linux-x64-gnu@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.14.0.tgz#dd3b9e5cbbb9612da42107b896622542594b1678"
-  integrity sha512-+dcNezLgUdAozcc6c0YSnZyRcOpro/yOOdy6ZjIwQtxej/5sEVJhXWbyHhdwSSlJssg/d+/7ihxEJIdZ8oDIfw==
+lightningcss-linux-x64-gnu@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-gnu/-/lightningcss-linux-x64-gnu-1.15.0.tgz#7a6a116b85331a2fdc3ba1afb481b3c29d69e3f1"
+  integrity sha512-kdmB3n/pYuX54VVOeORtlRIcXFzGGSZedMJ19IRjiGgrcmuuFWjcNjAw/r4KiNhXTtMoSBJ4tGlo65e+iJBRdQ==
 
-lightningcss-linux-x64-musl@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.14.0.tgz#f354b94d96138850ccac86ee0ab16113aeeb10c2"
-  integrity sha512-TI8tIaYv6SBpoBGatCG8gKQMxMCUcc+rvBSrqU7geHFBwzzyxOEHflENMclfwiYjTEM/HMdgJbWuHsIY3xvkuQ==
+lightningcss-linux-x64-musl@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-linux-x64-musl/-/lightningcss-linux-x64-musl-1.15.0.tgz#2a0b055bf4d472d1cccfbd072e7c418e974b4e5b"
+  integrity sha512-9ylrbm6x3a6QYFdrHVl3nbVLgxSzh4IQT5PqjqVeaeP1XaC3tPu0bVoxkHai0o2rRFW+U0CjJI2+3VzZa/RaVA==
 
-lightningcss-win32-x64-msvc@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.14.0.tgz#cbb04074b868edef98c0e1273702ba2a63b928cd"
-  integrity sha512-l2H8GoDn+WJAENKrIgNgRunqP3gvyBQwBmFqIXpuxx9G6ll2aTlyQsvsVxzJWJ5ePl3atNRGFQO+ZkiTNSm71A==
+lightningcss-win32-x64-msvc@1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.15.0.tgz#5f49afba652990d3a73845762ad4c11fda40ae33"
+  integrity sha512-oQJ1rKjV9NgKSbzyIPupkdmHyFFg56CFEJ16ZT+8j4H/G+uljPIaXvOmR6OplEms84R77JS7rX9zyL5XfF+szA==
 
 lightningcss@^1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/lightningcss/-/lightningcss-1.14.0.tgz#84daa8abfeeff9fc9dacf9a1ea9ee6c9bbcc597d"
-  integrity sha512-Vwa1JWiLGRLntf4TXRu/zF2RaHRfJjbZwUzkl2C4LhnRQzsEwkyeAQjAxtpJ5NDnVVUf10q1olEzkFF4AWZLOw==
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/lightningcss/-/lightningcss-1.15.0.tgz#a7e8b4e76718f6a75c504f324563628d2d8dfeb9"
+  integrity sha512-FF1SDM8Mo43lExnWkrXesDMoKFYM5iDbqbLl408VH6VyB4TdMBEQpWW4bbUrE03Vhl7ioIUMEJfgzAV7vaeYkw==
   dependencies:
     detect-libc "^1.0.3"
   optionalDependencies:
-    lightningcss-darwin-arm64 "1.14.0"
-    lightningcss-darwin-x64 "1.14.0"
-    lightningcss-linux-arm-gnueabihf "1.14.0"
-    lightningcss-linux-arm64-gnu "1.14.0"
-    lightningcss-linux-arm64-musl "1.14.0"
-    lightningcss-linux-x64-gnu "1.14.0"
-    lightningcss-linux-x64-musl "1.14.0"
-    lightningcss-win32-x64-msvc "1.14.0"
+    lightningcss-darwin-arm64 "1.15.0"
+    lightningcss-darwin-x64 "1.15.0"
+    lightningcss-linux-arm-gnueabihf "1.15.0"
+    lightningcss-linux-arm64-gnu "1.15.0"
+    lightningcss-linux-arm64-musl "1.15.0"
+    lightningcss-linux-x64-gnu "1.15.0"
+    lightningcss-linux-x64-musl "1.15.0"
+    lightningcss-win32-x64-msvc "1.15.0"
 
 lines-and-columns@^1.1.6:
   version "1.2.4"
@@ -1164,9 +1180,9 @@ msgpackr-extract@^2.0.2:
     "@msgpackr-extract/msgpackr-extract-win32-x64" "2.1.2"
 
 msgpackr@^1.5.4:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.6.2.tgz#176cd9f6b4437dad87a839b37f23c2dfee408d9a"
-  integrity sha512-bqSQ0DYJbXbrJcrZFmMygUZmqQiDfI2ewFVWcrZY12w5XHWtPuW4WppDT/e63Uu311ajwkRRXSoF0uILroBeTA==
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/msgpackr/-/msgpackr-1.6.3.tgz#8ea3fb3d1de37d003c0e22edc0d2b6e8f3bd9de9"
+  integrity sha512-Wtwnt2W06wNOLzV3N0XLLAJCxpwlCfFpvSZAXsu+xf71X7KuqBEDhDSjAy9nwNhQ2aK74Rd1RiRln+62tffoXw==
   optionalDependencies:
     msgpackr-extract "^2.0.2"
 
@@ -1211,6 +1227,13 @@ ordered-binary@^1.2.4:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.3.0.tgz#a116d64c923278216e335602d279750b2ebd746e"
   integrity sha512-knIeYepTI6BDAzGxqFEDGtI/iGqs57H32CInAIxEvAHG46vk1Di0CEpyc1A7iY39B1mfik3g3KLYwOTNnnMHLA==
+
+parcel-reporter-static-files-copy@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/parcel-reporter-static-files-copy/-/parcel-reporter-static-files-copy-1.4.0.tgz#9966b71273533c54201b7c02c6340a7956a583b9"
+  integrity sha512-bOX94IbN97QT345staIdUUCFFEc2LC8rqfOf1CgVODWxE0rPZzEtWxboOI6d2OdO2SyZY0P6i6ngTBnkvvRswg==
+  dependencies:
+    "@parcel/plugin" "^2.0.0-beta.1"
 
 parcel@2.7.0:
   version "2.7.0"

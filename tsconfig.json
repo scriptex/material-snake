@@ -12,7 +12,7 @@
 		"importHelpers": false,
 		"isolatedModules": true,
 		"jsx": "react",
-		"lib": ["DOM", "ESNext"],
+		"lib": ["DOM", "WebWorker", "ESNext"],
 		"module": "ESNext",
 		"moduleResolution": "Node",
 		"noEmit": false,
@@ -34,6 +34,6 @@
 		"strictNullChecks": true,
 		"target": "ES5"
 	},
-	"include": ["src/*.ts"],
+	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules"]
 }
