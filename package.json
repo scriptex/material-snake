@@ -12,7 +12,7 @@
 	"dependencies": {
 		"html-head-component": "1.2.1",
 		"scriptex-socials": "1.7.0",
-		"touchsweep": "2.0.1"
+		"touchsweep": "2.1.0"
 	},
 	"devDependencies": {
 		"@parcel/packager-raw-url": "2.8.0",

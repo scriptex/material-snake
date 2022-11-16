@@ -1554,10 +1554,10 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==
 
-touchsweep@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/touchsweep/-/touchsweep-2.0.1.tgz#f0e7f50090a63359d61a9b483fe32211260ada69"
-  integrity sha512-LRgSS7i3LxWh9RTe0bmHSL54Oo7DgvAoILUeteaAXdZ+A5noZ02gtdc8qUnZ6ichOvT3E0fRKAiZ4O114dSqZQ==
+touchsweep@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/touchsweep/-/touchsweep-2.1.0.tgz#3cf8646cabe0e47466a398580724ec367403a745"
+  integrity sha512-lCdHhYs/SCxvz3ggJY/425Y57/xFDsMViOMRam1vhRrKBSb1AjscwkpTPGwgavMrZ19UNs+MuxXuUczn23PQTA==
 
 tslib@^2.4.0:
   version "2.4.0"
