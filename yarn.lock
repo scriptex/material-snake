@@ -1365,10 +1365,10 @@ ordered-binary@^1.2.4:
   resolved "https://registry.yarnpkg.com/ordered-binary/-/ordered-binary-1.3.0.tgz#a116d64c923278216e335602d279750b2ebd746e"
   integrity sha512-knIeYepTI6BDAzGxqFEDGtI/iGqs57H32CInAIxEvAHG46vk1Di0CEpyc1A7iY39B1mfik3g3KLYwOTNnnMHLA==
 
-parcel-reporter-static-files-copy@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/parcel-reporter-static-files-copy/-/parcel-reporter-static-files-copy-1.4.0.tgz#9966b71273533c54201b7c02c6340a7956a583b9"
-  integrity sha512-bOX94IbN97QT345staIdUUCFFEc2LC8rqfOf1CgVODWxE0rPZzEtWxboOI6d2OdO2SyZY0P6i6ngTBnkvvRswg==
+parcel-reporter-static-files-copy@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/parcel-reporter-static-files-copy/-/parcel-reporter-static-files-copy-1.5.0.tgz#8ca7d7e4d1f0f52c30853117403696decf64da24"
+  integrity sha512-dsY3MQkbYSgEqS0/22vtD2mZtel8UC0ItH0ok8LmgFeCMTsdhyOtJgvt945ODIzu9lYc/sCIzksM8C77uSE3Fg==
   dependencies:
     "@parcel/plugin" "^2.0.0-beta.1"
 
