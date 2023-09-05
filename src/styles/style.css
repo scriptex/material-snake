@@ -31,4 +31,11 @@ footer {
 	color: #fff;
 	padding: 1rem;
 	border-top: 1px solid #fff;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+social-links {
+	width: 27.875rem;
+	display: block;
 }

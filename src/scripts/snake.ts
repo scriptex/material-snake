@@ -3,6 +3,13 @@ import TouchSweep from 'touchsweep';
 type Point = Record<'x' | 'y', number>;
 type IndexedList<T> = Record<string, T>;
 
+const touchEvents: IndexedList<string> = {
+	swipeleft: 'swipeleft',
+	swipeup: 'swipeup',
+	swiperight: 'swiperight',
+	swipedown: 'swipedown'
+};
+
 export class Snake {
 	public touchSwipeInstance: TouchSweep | void = undefined;
 
@@ -187,42 +194,43 @@ export class Snake {
 	};
 
 	private bindKeyboardEvents = (event: KeyboardEvent): void => {
-		this.respondToGesture(event.keyCode);
+		this.respondToGesture(event.key);
 	};
 
 	private bindTouchEvents = (): void => {
 		const board: HTMLCanvasElement = this.canvas;
-		const touchEvents: IndexedList<number> = {
-			swipeleft: 37,
-			swipeup: 38,
-			swiperight: 39,
-			swipedown: 40
-		};
 
 		this.touchSwipeInstance = new TouchSweep(board);
 
 		Object.keys(touchEvents).forEach((name: string): void => {
 			board.addEventListener(name, (event: any): void => {
-				this.respondToGesture(touchEvents[event.detail.eventName]);
+				this.respondToGesture(touchEvents[event.type]);
 			});
 		});
 	};
 
-	private respondToGesture = (keyCode: number): void => {
-		switch (keyCode) {
-			case 37:
+	private respondToGesture = (event: string): void => {
+		switch (event) {
+			case 'ArrowLeft':
+			case touchEvents.swipeleft:
 				this.velocityX = -1;
 				this.velocityY = 0;
 				break;
-			case 38:
+
+			case 'ArrowUp':
+			case touchEvents.swipeup:
 				this.velocityX = 0;
 				this.velocityY = -1;
 				break;
-			case 39:
+
+			case 'ArrowRight':
+			case touchEvents.swiperight:
 				this.velocityX = 1;
 				this.velocityY = 0;
 				break;
-			case 40:
+
+			case 'ArrowDown':
+			case touchEvents.swipedown:
 				this.velocityX = 0;
 				this.velocityY = 1;
 				break;
