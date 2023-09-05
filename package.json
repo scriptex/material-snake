@@ -15,6 +15,7 @@
 		"touchsweep": "2.1.0"
 	},
 	"devDependencies": {
+		"@parcel/core": "2.9.3",
 		"@parcel/packager-raw-url": "2.9.3",
 		"@parcel/transformer-typescript-tsc": "2.9.3",
 		"@parcel/transformer-webmanifest": "2.9.3",

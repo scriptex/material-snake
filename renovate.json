@@ -15,7 +15,7 @@
 	},
 	"packageRules": [
 		{
-			"matchPackagePatterns": ["parcel"],
+			"matchPackagePatterns": ["parcel", "@parcel"],
 			"groupName": "parcel"
 		}
 	]
