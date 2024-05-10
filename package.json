@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"html-head-component": "1.2.1",
-		"scriptex-socials": "1.7.0",
+		"scriptex-socials": "1.8.0",
 		"touchsweep": "2.2.0"
 	},
 	"devDependencies": {
