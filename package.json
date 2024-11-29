@@ -15,11 +15,11 @@
 		"touchsweep": "2.2.0"
 	},
 	"devDependencies": {
-		"@parcel/core": "2.13.0",
-		"@parcel/packager-raw-url": "2.13.0",
-		"@parcel/transformer-typescript-tsc": "2.13.0",
-		"@parcel/transformer-webmanifest": "2.13.0",
-		"parcel": "2.13.0",
+		"@parcel/core": "2.13.2",
+		"@parcel/packager-raw-url": "2.13.2",
+		"@parcel/transformer-typescript-tsc": "2.13.2",
+		"@parcel/transformer-webmanifest": "2.13.2",
+		"parcel": "2.13.2",
 		"parcel-reporter-static-files-copy": "1.5.3",
 		"typescript": "5.6.3"
 	},
