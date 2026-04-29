@@ -21,7 +21,7 @@
 		"@parcel/transformer-webmanifest": "2.16.4",
 		"parcel": "2.16.4",
 		"parcel-reporter-static-files-copy": "1.5.3",
-		"typescript": "6.0.2"
+		"typescript": "6.0.3"
 	},
 	"private": true
 }
